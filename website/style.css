@@ -1,19 +1,27 @@
 body{
-    background: #fffff8;
+    background-image: url('assets/weather-image.jpg');
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
     font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    display: flex;
+    justify-content: center;
+    height: 97.5vh;
 }
 
 #app{
-    display: grid;
-    grid-auto-rows: minmax(150px, auto);
-    /* grid-template-columns:  */
-    height:100vh;
-    background: #f23557;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: auto;
     color: #f0d43a;
-    justify-content: center;
-    grid-gap: 1em;
-    font-size: 20px;
+    font-size: 1.25rem;
     font-family: 'Oswald', sans-serif;
+    border: solid rgb(227, 227, 227);
+    border-radius: 1em;
+    background-color: rgb(253, 253, 253);
+    padding: 1em;
+    gap: 0.5em;
 }
 
 .holder{
@@ -21,11 +29,14 @@ body{
 }
 
 .entry{
-    background: rgba(59, 74, 107, .4);
+    border: solid rgb(227, 227, 227);
+    border-radius: 1em;
+    background-color: rgba(253, 253, 253, 0.845);
+    padding: 0.5em;
 }
 
 #entryHolder{
-
+    border-top: solid #3b4a6b;
 }
 
 #date{
@@ -41,10 +52,12 @@ body{
 }
 
 .headline {
+    margin: auto;
+    font-size: 2em;
 
 }
 .title{
-
+    font-size: 27px;
 }
 
 /*  Basic Styling To Override Default For Basic HTML Elements */
@@ -55,24 +68,26 @@ label{
 
 input{
     display:block;
-    height: 60px;
-    width: 320px;
+    height: fit-content;
+    width: -webkit-fill-available;
     background:#22b2da;
     color: #f0d43a;
-    font-size: 20px;
+    font-size: 1.25rem;
     font-family: 'Oswald', sans-serif;
     border: none;
+    border-radius: 0.25em;
+    padding-left: 0.5em;
 }
 
 button{
-    width: 400px;
-    height: 100px;
     background: #3b4a6b;
     color: #f0d43a;
     font-size: 26px;
     font-family: 'Oswald', sans-serif;
     border: none;
     box-shadow: 2px 4px 5px #444;
+    height: fit-content;
+    width: -webkit-fill-available;
 }
 h1{
     font-size: 36px;
@@ -81,8 +96,12 @@ h1{
 textarea{
     background:#22b2da;
     color: #f0d43a;
-    font-size: 20px;
+    font-size: 1.25rem;
     font-family: 'Oswald', sans-serif;
+    border-radius: 0.25em;
+    padding-left: 0.5em;
+    height: fit-content;
+    width: -webkit-fill-available;
 }
 /* Reset style for HTML element on active to have no border*/
 input:focus,
@@ -109,3 +128,15 @@ button:focus {
     font-family: 'Oswald', sans-serif;
 
 } 
+
+@media (min-width: 600px) and (max-width:900px) {
+    #app{
+        width: 70%;
+    }
+}
+
+@media (min-width:901px) {
+    #app{
+        width: 55%;
+    }
+}
