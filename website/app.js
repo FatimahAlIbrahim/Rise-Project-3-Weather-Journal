@@ -202,7 +202,7 @@ const getWeatherEntry = async (url) => {
     const res = await fetch(url);
     try {
       const data = await res.json();
-      document.getElementById("temp").innerHTML = "Temperature: " + data.temperature + "degrees";
+      document.getElementById("temp").innerHTML = "Temperature: " + data.temperature + " degrees";
       document.getElementById("date").innerHTML = "Date: " + data.date;
       document.getElementById("content").innerHTML = data.userResponse;
     } catch (error) {
