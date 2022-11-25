@@ -26,5 +26,21 @@ const port = 8000;
 const server = app.listen(port, () => {
     console.log("Server is running");
     console.log(`Running on localhost: ${port}`);
+});
 
+// Get routes
+app.get('/weatherData', (req, res)=>{
+    res.send(projectData);
+});
+
+// Post routes
+app.post('/addWeatherData', (req, res)=>{
+    console.log(req.body);
+    const todayWeather = {
+        "temperature": req.body.temperature,
+        "date": req.body.date,
+        "userResponse": req.body.userResponse
+    };
+
+    projectData = todayWeather;
 });
