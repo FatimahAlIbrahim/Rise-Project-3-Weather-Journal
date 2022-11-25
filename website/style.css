@@ -55,7 +55,7 @@ body{
 
 #flexContainer {
     display: flex;
-    gap: 1em;
+    gap: 0.5em;
     margin-top: 0.5em;
     border: solid;
     border-radius: 0.25em;
