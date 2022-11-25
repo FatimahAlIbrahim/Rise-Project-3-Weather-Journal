@@ -23,19 +23,20 @@ app.use(express.static('website'));
 
 // Setup Server
 const port = 8000;
-const server = app.listen(port, () => {
+app.listen(port, () => {
     console.log("Server is running");
     console.log(`Running on localhost: ${port}`);
 });
 
 // Get routes
-app.get('/weatherData', (req, res)=>{
+app.get('/getWeatherData', (req, res)=>{
     res.send(projectData);
 });
 
 // Post routes
 app.post('/addWeatherData', (req, res)=>{
     console.log(req.body);
+    console.log("add weather data entered")
     const todayWeather = {
         "temperature": req.body.temperature,
         "date": req.body.date,

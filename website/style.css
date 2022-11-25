@@ -24,10 +24,6 @@ body{
     gap: 0.5em;
 }
 
-.holder{
-
-}
-
 .entry{
     border: solid rgb(227, 227, 227);
     border-radius: 1em;
@@ -40,15 +36,29 @@ body{
 }
 
 #date{
-
+    color: #3b4a6b;
 }
 
 #temp{
-
+    color: #3b4a6b;
 }
 
 #content{
+    color: #3b4a6b;
+    padding: 0 0.5em;
+    border: solid #3b4a6b;
+    margin-top: 0.5em;
+    border-radius: 0.25em;
+    text-align: justify;
+}
 
+#flexContainer {
+    display: flex;
+    gap: 1em;
+    margin-top: 0.5em;
+    border: solid;
+    border-radius: 0.25em;
+    padding-left: 0.5em;
 }
 
 .headline {
