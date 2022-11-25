@@ -66,9 +66,8 @@ label{
     font-size: 27px;
 }
 
-input{
+select{
     display:block;
-    height: fit-content;
     width: -webkit-fill-available;
     background:#22b2da;
     color: #f0d43a;
