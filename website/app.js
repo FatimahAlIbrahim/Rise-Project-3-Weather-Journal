@@ -132,7 +132,7 @@ const citiesArray = [
 ];
 
 // Add the cities from the sities array to the select dynamically
-let select = document.getElementById("zip");
+let select = document.getElementById("city");
 let documentFragment = document.createDocumentFragment();
 
 for (let i = 0; i < citiesArray.length; i++) {
@@ -149,15 +149,15 @@ let d = new Date();
 let newDate = d.getMonth() + "." + d.getDate() + "." + d.getFullYear();
 
 // Personal API Key for OpenWeatherMap API
-const apiKey = "c0e8b8b52ddfeffe28108f5917407c3f";
-const openWeatherMapUrl = "https://api.openweathermap.org/data/2.5/weather?units=imperial";
+const apiKey = "c0e8b8b52ddfeffe28108f5917407c3f&units=imperial";
+const openWeatherMapUrl = "https://api.openweathermap.org/data/2.5/weather?";
 
 // Event listener to add function to existing HTML DOM element
 document.getElementById("generate").addEventListener("click", generateEntry);
 
 /* Function called by event listener */
 function generateEntry() {
-  let selectedCity = document.getElementById("zip").value;
+  let selectedCity = document.getElementById("city").value;
   getTodayWeather(openWeatherMapUrl, selectedCity, apiKey).then((temp) => {
     let newData = {
       temperature: temp,
@@ -202,7 +202,7 @@ const getWeatherEntry = async (url) => {
     const res = await fetch(url);
     try {
       const data = await res.json();
-      document.getElementById("temp").innerHTML = "Temperature: " + data.temperature;
+      document.getElementById("temp").innerHTML = "Temperature: " + data.temperature + "degrees";
       document.getElementById("date").innerHTML = "Date: " + data.date;
       document.getElementById("content").innerHTML = data.userResponse;
     } catch (error) {
