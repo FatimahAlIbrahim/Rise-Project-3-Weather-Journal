@@ -1,10 +1,10 @@
-# Weather-Journal App Project
+# Rise Front End Developer Nanodegree Project 3: Weather-Journal App Project
+This website was created to satisfy the requirements of the second project in Udacity's Front End Developer Nanodegree.
 
-## Overview
-This project requires you to create an asynchronous web app that uses Web API and user data to dynamically update the UI. 
+## Description
+A weather journal application that allow the user to enter their feelings about today's weather.
 
-## Instructions
-This will require modifying the `server.js` file and the `website/app.js` file. You can see `index.html` for element references, and once you are finished with the project steps, you can use `style.css` to style your application to customized perfection.
-
-## Extras
-If you are interested in testing your code as you go, you can use `tests.js` as a template for writing and running some basic tests for your code.
+### Functionality
+- Allow the user to chose a city from the list
+- Allow the user to enter their feelings about the weather.
+- Allow the user to click a button that will generate an entry with today's date, temperature and the user feelings.
